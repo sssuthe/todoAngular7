@@ -1,3 +1,7 @@
+Rehydrated this old project, heavily influence from (https://levelup.gitconnected.com/simple-application-with-angular-6-node-js-express-2873304fff0f)
+
+this is designed to work with todo-list-api repo
+
 # TodoAngular7
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.3.
