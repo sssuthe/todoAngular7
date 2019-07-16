@@ -2,13 +2,12 @@ Rehydrated this old project, heavily influence from (https://levelup.gitconnecte
 
 this is designed to work with todo-list-api repo
 
+# Running this app
+Run npm start for dev server that will proxy all /api requests to localhost:3000
+
 # TodoAngular7
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.3.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
