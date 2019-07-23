@@ -10,6 +10,8 @@ import { DisplayTodoItemComponent } from './display-todo-item/display-todo-item.
 import { Routes, RouterModule } from "@angular/router";
 import { HttpClientModule } from '@angular/common/http';
 import { LoggedOutComponent } from './logged-out/logged-out.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { CallbackComponent } from './callback/callback.component';
 
 const routes: Routes = [
   {
@@ -22,7 +24,7 @@ const routes: Routes = [
   },
   {
     path: 'callback',
-    component: InputTodoItemComponent
+    component: CallbackComponent
   },
   {
     path: 'logged-out',
@@ -35,7 +37,9 @@ const routes: Routes = [
     AppComponent,
     InputTodoItemComponent,
     DisplayTodoItemComponent,
-    LoggedOutComponent
+    LoggedOutComponent,
+    NavbarComponent,
+    CallbackComponent
   ],
   imports: [
     BrowserModule,
