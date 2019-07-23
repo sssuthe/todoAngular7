@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
 import { HttpClient } from "@angular/common/http";
 import { Router } from "@angular/router";
+import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-input-todo-item',
@@ -18,7 +19,7 @@ export class InputTodoItemComponent implements OnInit {
 
   constructor(private formBuilder: FormBuilder, private http: HttpClient, private router: Router)
   {
-  	this.http.get('/api/v1/generate_uid').subscribe((data:any) => {
+  	this.http.get(environment.resourceServer.generateUidUrl).subscribe((data:any) => {
       this.guid = data.guid;
     }, error => {
         console.log("There was an error generating the proper GUID on the server", error);
@@ -54,7 +55,7 @@ export class InputTodoItemComponent implements OnInit {
   	{
   		let data: any = Object.assign({guid: this.guid}, this.todoForm.value);
 
-  		this.http.post('/api/v1/todo', data).subscribe((data:any) => {
+  		this.http.post(environment.resourceServer.todoUrl, data).subscribe((data:any) => {
 
 	      let path = '/todo/' + data.todo.uid;
         //Navigate to the details page of the todo item we just made

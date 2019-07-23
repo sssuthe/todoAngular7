@@ -9,6 +9,7 @@ import { DisplayTodoItemComponent } from './display-todo-item/display-todo-item.
 
 import { Routes, RouterModule } from "@angular/router";
 import { HttpClientModule } from '@angular/common/http';
+import { LoggedOutComponent } from './logged-out/logged-out.component';
 
 const routes: Routes = [
   {
@@ -18,6 +19,14 @@ const routes: Routes = [
   {
     path: 'todo/:uid',
     component: DisplayTodoItemComponent
+  },
+  {
+    path: 'callback',
+    component: InputTodoItemComponent
+  },
+  {
+    path: 'logged-out',
+    component: LoggedOutComponent
   }
 ];
 
@@ -25,7 +34,8 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     InputTodoItemComponent,
-    DisplayTodoItemComponent
+    DisplayTodoItemComponent,
+    LoggedOutComponent
   ],
   imports: [
     BrowserModule,
