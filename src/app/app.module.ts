@@ -12,6 +12,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { LoggedOutComponent } from './logged-out/logged-out.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { CallbackComponent } from './callback/callback.component';
+import { ProfileComponent } from './profile/profile.component';
+
+import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
   {
@@ -29,6 +32,11 @@ const routes: Routes = [
   {
     path: 'logged-out',
     component: LoggedOutComponent
+  },
+  {
+    path: 'profile',
+    component: ProfileComponent,
+    canActivate: [AuthGuard]
   }
 ];
 
@@ -39,7 +47,8 @@ const routes: Routes = [
     DisplayTodoItemComponent,
     LoggedOutComponent,
     NavbarComponent,
-    CallbackComponent
+    CallbackComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
