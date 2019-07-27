@@ -15,7 +15,7 @@ WORKDIR /ng-app
 COPY . .
 
 RUN npm install
-RUN npm install -g @angular/cli@8.1.1
+RUN npm install -g @angular/cli
 
 ## Build the angular app in production mode and store the artifacts in dist folder
 
@@ -31,7 +31,7 @@ COPY nginx/default.conf /etc/nginx/conf.d/
 ## Remove default nginx website
 RUN rm -rf /usr/share/nginx/html/*
 
-EXPOSE 80
+EXPOSE 8080
 
 ## From ‘builder’ stage copy over the artifacts in dist folder to default nginx public folder
 COPY --from=builder /ng-app/dist /usr/share/nginx/html
