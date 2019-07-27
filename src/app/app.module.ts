@@ -15,6 +15,7 @@ import { CallbackComponent } from './callback/callback.component';
 import { ProfileComponent } from './profile/profile.component';
 
 import { AuthGuard } from './auth.guard';
+import { ExternalApiComponent } from './external-api/external-api.component';
 
 const routes: Routes = [
   {
@@ -37,7 +38,12 @@ const routes: Routes = [
     path: 'profile',
     component: ProfileComponent,
     canActivate: [AuthGuard]
-  }
+  },
+  {
+     path: 'external-api',
+     component: ExternalApiComponent,
+     canActivate: [AuthGuard]
+    }
 ];
 
 @NgModule({
@@ -48,7 +54,8 @@ const routes: Routes = [
     LoggedOutComponent,
     NavbarComponent,
     CallbackComponent,
-    ProfileComponent
+    ProfileComponent,
+    ExternalApiComponent
   ],
   imports: [
     BrowserModule,

@@ -16,7 +16,8 @@ export class AuthService {
   config = {
     domain: "dev-b6-e-5pf.auth0.com",
     client_id: "TYdyF1MYBcCr735rdPT2B5Te3ItQc2J8",
-    redirect_uri: `${window.location.origin}/callback`
+    redirect_uri: `${window.location.origin}/callback`,
+    audience: "https://api.shark-ops.com" // NEW - add in the audience value
   };
 
   /**
