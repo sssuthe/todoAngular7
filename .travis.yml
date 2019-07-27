@@ -18,10 +18,10 @@ before_install:
 deploy:
   provider: elasticbeanstalk
   region: "us-east-1"
-  app: "shark-ops"
-  env: "SharkOps-client-env"
+  app: "shark-ops-client"
+  env: "SharkOpsClient-env"
   bucket_name: "elasticbeanstalk-us-east-1-033966497385"
-  bucket_path: "shark-ops"
+  bucket_path: "shark-ops-client"
   on:
     branch: master
   access_key_id: $AWS_ACCESS_KEY
