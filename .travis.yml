@@ -19,7 +19,7 @@ deploy:
   provider: elasticbeanstalk
   region: "us-east-1"
   app: "shark-ops"
-  env: "SharkOpsClient-env"
+  env: "SharkOps-client-env"
   bucket_name: "elasticbeanstalk-us-east-1-033966497385"
   bucket_path: "shark-ops-client"
   on:
