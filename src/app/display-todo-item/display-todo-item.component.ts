@@ -14,8 +14,8 @@ export class DisplayTodoItemComponent implements OnInit {
   private subscriber: any;
 
   todoItem: TodoItemModel = new TodoItemModel({guid: "D21ds12x",
-  userName: "sssuthe",
-  todo: "do something"});
+  userName: "enter user name here",
+  todo: "enter todo description here"});
 
 	constructor(private http: HttpClient, private route: ActivatedRoute) {
 
