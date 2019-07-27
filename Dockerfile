@@ -12,7 +12,7 @@ RUN npm ci && mkdir /ng-app && mv ./node_modules ./ng-app
 
 WORKDIR /ng-app
 
-COPY . .
+COPY ./ ./
 
 RUN npm install
 RUN npm install -g @angular/cli
@@ -31,7 +31,7 @@ COPY nginx/default.conf /etc/nginx/conf.d/
 ## Remove default nginx website
 RUN rm -rf /usr/share/nginx/html/*
 
-EXPOSE 8080
+EXPOSE 80
 
 ## From ‘builder’ stage copy over the artifacts in dist folder to default nginx public folder
 COPY --from=builder /ng-app/dist /usr/share/nginx/html
