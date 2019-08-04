@@ -53,7 +53,7 @@ export class InputTodoItemComponent implements OnInit {
   	}
   	else
   	{
-  		let data: any = Object.assign({guid: this.guid}, this.todoForm.value);
+      let data: any = Object.assign({guid: this.guid}, this.todoForm.value);
 
   		this.http.post(environment.resourceServer.todoUrl, data).subscribe((data:any) => {
 
